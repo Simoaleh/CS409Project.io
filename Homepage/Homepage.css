@@ -1,0 +1,155 @@
+.gallery-slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin: 0; /* Remove margin: auto */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    z-index: 0; /* Add z-index: 0 to the gallery slider */
+  }
+  
+
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+    background-color: #121F42;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  z-index: 10; /* Add z-index: 10 to the header */
+
+  } 
+  .IndexText {
+    margin-top: 0; /* adjust the value to your liking */
+    padding-top: 0; /* adjust the value to your liking */
+    
+  }
+  h1, h2, h3 {
+    color:  #1c3371; /* adjust the color to your liking */
+  }
+  
+
+.menu {
+  position: absolute;
+  z-index: 20; /* Increase z-index to 20 */
+  top: 100px;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  background-color: #2a4283;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+  
+  
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+  
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+  .slide.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .slide.fade-out {
+    opacity: 0;
+  }
+  
+ 
+  .slide img {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .slider-nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cycle-button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cycle-button:hover {
+    opacity: 0;
+  }
+  
+  .slider-container .slide.active {
+    display: block;
+  }
+  
+  .campus-image-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .campus-image-container img {
+    width: 45em;
+    height: 30em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .campus-image-container a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .campus-image-container a:hover {
+    color: #666;
+  }
+  @media only screen and (max-width:768px) {
+    .gallery-slider {
+      max-height: 30vh;
+    }
+    .campus-image-container img {
+      max-width: 90vw;
+      max-height: 30vh;
+    }
+    .IndexText {
+      margin-top: 0; /* adjust the value to your liking */
+      padding-top: 0; /* adjust the value to your liking */
+    }
+    
+    
+  }
+  
+ 
+  
+ 
